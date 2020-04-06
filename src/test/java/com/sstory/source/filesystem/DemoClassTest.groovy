@@ -1,3 +1,5 @@
+package com.sstory.source.filesystem
+
 import spock.lang.Specification
 
 class DemoClassTest extends Specification {
