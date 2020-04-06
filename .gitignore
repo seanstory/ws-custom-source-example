@@ -27,4 +27,4 @@ target
 
 # Jetbrains files
 *.iml
-idea
+.idea
