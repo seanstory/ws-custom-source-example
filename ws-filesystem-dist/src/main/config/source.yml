@@ -1,0 +1,5 @@
+# Provide an Access Token (found in the Workplace Search UI)
+# access_token: <your access token here>
+
+# Provide a Content Source Key (found in the Workplace Search UI)
+# content_source_key: <your content source key here>
