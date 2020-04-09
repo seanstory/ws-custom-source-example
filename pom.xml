@@ -2,14 +2,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.sstory.source.filesystem</groupId>
-    <artifactId>ws-filesystem-source</artifactId>
-    <name>Workplace Search Filesystem Source :: Parent</name>
+    <groupId>com.sstory.source.custom.example</groupId>
+    <artifactId>custom-source-example</artifactId>
+    <name>Workplace Search Example Custom Source :: Parent</name>
     <packaging>pom</packaging>
     <version>0.1.0-SNAPSHOT</version>
     <modules>
-        <module>ws-filesystem-core</module>
-        <module>ws-filesystem-dist</module>
+        <module>custom-source-example-core</module>
+        <module>custom-source-example-dist</module>
     </modules>
 
     <properties>
