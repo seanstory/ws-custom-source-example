@@ -1,0 +1,10 @@
+#!/bin/bash
+set -e
+
+SCRIPTPATH="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+
+CLASSPATH="${SCRIPTPATH}/../lib/*"
+MAIN="com.sstory.source.filesystem.run.Sync"
+CONFIG="${SCRIPTPATH}/../config/source.yml"
+
+java -cp "$CLASSPATH" "$MAIN" "$CONFIG" "$@"
