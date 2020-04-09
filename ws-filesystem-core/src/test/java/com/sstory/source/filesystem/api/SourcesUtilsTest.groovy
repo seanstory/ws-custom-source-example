@@ -3,12 +3,12 @@ package com.sstory.source.filesystem.api
 import com.sstory.source.filesystem.sources.HelloWorldSource
 import spock.lang.Specification
 
-class SourcesParserTest extends Specification {
+class SourcesUtilsTest extends Specification {
 
     def "test source lookup"(){
         when:
         def stream = new ByteArrayInputStream(text.getBytes("UTF-8"))
-        def parser = new SourcesParser(stream)
+        def parser = new SourcesUtils(stream)
 
         then:
         parser.isEnabled(expectedContains)

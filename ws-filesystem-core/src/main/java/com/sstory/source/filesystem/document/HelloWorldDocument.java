@@ -11,6 +11,10 @@ public class HelloWorldDocument extends DocumentBase {
         super(id, "hello, world!");
     }
 
+    public HelloWorldDocument(String id, String body){
+        super(id, body);
+    }
+
     @Override
     public Map<String, Object> getMetadata() {
         return Collections.emptyMap();

@@ -9,8 +9,18 @@ import java.util.Iterator;
 
 public class HelloWorldSource implements Source<HelloWorldDocument> {
 
+    private final String greeting;
+
+    public HelloWorldSource(){
+        greeting = "hello, world!";
+    }
+
+    public HelloWorldSource(String greeting){
+        this.greeting = greeting;
+    }
+
     @Override
     public Iterator<HelloWorldDocument> getDocuments() {
-        return Collections.singletonList(new HelloWorldDocument(String.valueOf(Instant.now().toEpochMilli()))).iterator();
+        return Collections.singletonList(new HelloWorldDocument(String.valueOf(Instant.now().toEpochMilli()), greeting)).iterator();
     }
 }

@@ -2,7 +2,7 @@ package com.sstory.source.filesystem.run;
 
 import com.sstory.source.filesystem.api.DocumentBase;
 import com.sstory.source.filesystem.api.Source;
-import com.sstory.source.filesystem.api.SourcesParser;
+import com.sstory.source.filesystem.api.SourcesUtils;
 import com.sstory.source.filesystem.api.YamlConfig;
 import com.sstory.workplace.search.client.Client;
 import org.slf4j.Logger;
@@ -33,20 +33,16 @@ public class Sync {
         Client client = new Client(yamlConfig.accessToken, yamlConfig.endpoint);
         Source source = null;//TODO, dependency inject? Not sure I like this. Maybe from a resource file?
         try {
-            SourcesParser parser = new SourcesParser();
+            SourcesUtils parser = new SourcesUtils();
             String sourceName = getSourceName(args, parser);
             if (parser.isEnabled(sourceName)){
-                source = parser.getSource(sourceName).newInstance(); //TODO constructor args?
+                source = parser.initialize(parser.getSource(sourceName), yamlConfig);
             } else {
                 log.error("{} is not one of the enabled sources: {}", sourceName, parser.getEnabledSources());
             }
 
         } catch (ClassNotFoundException | ClassCastException e) {
             log.error("Could not find a proper Source class with name: {}", args[1]);
-            log.debug("with stack trace: ", e);
-            System.exit(1);
-        } catch (IllegalAccessException | InstantiationException e) {
-            log.error("Failed to load class: {}", args[1]);
             log.debug("with stack trace: ", e);
             System.exit(1);
         } catch (IOException e) {
@@ -82,7 +78,7 @@ public class Sync {
         System.exit(0);
     }
 
-    private static String getSourceName(String[] args, SourcesParser parser){
+    private static String getSourceName(String[] args, SourcesUtils parser){
         if(args.length >=2){
             return args[1];
         } else {
