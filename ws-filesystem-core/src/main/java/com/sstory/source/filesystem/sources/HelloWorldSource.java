@@ -1,10 +1,10 @@
 package com.sstory.source.filesystem.sources;
 
 import com.sstory.source.filesystem.api.Source;
+import com.sstory.source.filesystem.api.Yielder;
 import com.sstory.source.filesystem.document.HelloWorldDocument;
 
 import java.time.Instant;
-import java.util.Collections;
 import java.util.Iterator;
 
 public class HelloWorldSource implements Source<HelloWorldDocument> {
@@ -21,6 +21,21 @@ public class HelloWorldSource implements Source<HelloWorldDocument> {
 
     @Override
     public Iterator<HelloWorldDocument> getDocuments() {
-        return Collections.singletonList(new HelloWorldDocument(String.valueOf(Instant.now().toEpochMilli()), greeting)).iterator();
+
+        return new Yielder<HelloWorldDocument>(){
+            boolean first =true;
+            @Override
+            protected void yieldNextCore() {
+                if (!first){
+                    yieldBreak();
+                    return;
+                }
+                String id = String.valueOf(Instant.now().toEpochMilli());
+                String body = greeting;
+                yieldReturn(new HelloWorldDocument(id, body));
+                first=false;
+            }
+
+        }.iterator();
     }
 }
