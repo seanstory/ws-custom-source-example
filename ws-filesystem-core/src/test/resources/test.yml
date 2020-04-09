@@ -7,3 +7,7 @@ content_source_key: 5e8f5266f74c321dae6e5548
 # (Optional) Provide an endpoint at which to hit the Workplace Search API
 # Default: http://localhost:3002/api/ws/v1/
 # endpoint: http://<hostname>:<port>/api/ws/v1
+
+# (Optional) Provide constructor arguments for your defined Sources
+#helloworld:
+#  - "Hola, mundo!"

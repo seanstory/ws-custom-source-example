@@ -1,7 +1,7 @@
 package com.sstory.source.filesystem.sources;
 
-import com.sstory.source.filesystem.api.Source;
-import com.sstory.source.filesystem.api.Yielder;
+import com.sstory.workplace.search.sdk.api.Source;
+import com.sstory.workplace.search.sdk.api.Yielder;
 import com.sstory.source.filesystem.document.HelloWorldDocument;
 
 import java.time.Instant;

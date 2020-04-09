@@ -1,6 +1,6 @@
 package com.sstory.source.filesystem.document;
 
-import com.sstory.source.filesystem.api.DocumentBase;
+import com.sstory.workplace.search.sdk.api.DocumentBase;
 
 import java.util.Collections;
 import java.util.Map;

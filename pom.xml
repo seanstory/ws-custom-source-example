@@ -17,7 +17,7 @@
         <kotlin.version>1.2.71</kotlin.version>
         <slf4j.version>1.7.25</slf4j.version>
         <logback.version>1.2.3</logback.version>
-        <workplace.client.version>7.8.0-SNAPSHOT</workplace.client.version>
+        <workplace.java.api.version>7.8.0-SNAPSHOT</workplace.java.api.version>
 
         <!-- Testing -->
         <spock.version>1.0-groovy-2.4</spock.version>
@@ -27,6 +27,11 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.codehaus.groovy</groupId>
+                <artifactId>groovy-all</artifactId>
+                <version>${groovy.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
@@ -53,23 +58,17 @@
                 <version>${kotlin.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.sstory.workplace.search.client</groupId>
-                <artifactId>workplace-search-java</artifactId>
-                <version>${workplace.client.version}</version>
+                <groupId>com.sstory.workplace.search</groupId>
+                <artifactId>workplace-search-client</artifactId>
+                <version>${workplace.java.api.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.yaml</groupId>
-                <artifactId>snakeyaml</artifactId>
-                <version>1.21</version>
+                <groupId>com.sstory.workplace.search</groupId>
+                <artifactId>workplace-search-sdk</artifactId>
+                <version>${workplace.java.api.version}</version>
             </dependency>
 
             <!-- test dependencies -->
-            <dependency>
-                <groupId>org.codehaus.groovy</groupId>
-                <artifactId>groovy-all</artifactId>
-                <version>${groovy.version}</version>
-                <scope>test</scope>
-            </dependency>
             <dependency>
                 <groupId>org.spockframework</groupId>
                 <artifactId>spock-core</artifactId>

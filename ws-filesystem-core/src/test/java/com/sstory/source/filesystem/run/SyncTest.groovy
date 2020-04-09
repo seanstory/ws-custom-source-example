@@ -1,12 +1,13 @@
 package com.sstory.source.filesystem.run
 
+import com.sstory.workplace.search.sdk.run.Sync
 import org.junit.Rule
 import org.junit.contrib.java.lang.system.ExpectedSystemExit
 import org.junit.contrib.java.lang.system.internal.CheckExitCalled
 import spock.lang.Ignore
 import spock.lang.Specification
 
-@Ignore //TODO - mock out network/client stuff so that this can be run
+//@Ignore //TODO - mock out network/client stuff so that this can be run
 class SyncTest extends Specification {
 
     @Rule
