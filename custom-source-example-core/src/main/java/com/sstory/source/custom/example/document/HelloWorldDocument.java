@@ -1,4 +1,4 @@
-package com.sstory.source.custom.example.filesystem.document;
+package com.sstory.source.custom.example.document;
 
 import com.sstory.workplace.search.sdk.api.DocumentBase;
 

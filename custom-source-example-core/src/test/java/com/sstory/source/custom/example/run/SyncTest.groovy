@@ -1,4 +1,4 @@
-package com.sstory.source.custom.example.filesystem.run
+package com.sstory.source.custom.example.run
 
 import com.sstory.workplace.search.sdk.run.Sync
 import org.junit.Rule

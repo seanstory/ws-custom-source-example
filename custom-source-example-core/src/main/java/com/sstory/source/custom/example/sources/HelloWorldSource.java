@@ -1,8 +1,8 @@
-package com.sstory.source.custom.example.filesystem.sources;
+package com.sstory.source.custom.example.sources;
 
 import com.sstory.workplace.search.sdk.api.Source;
 import com.sstory.workplace.search.sdk.api.Yielder;
-import com.sstory.source.custom.example.filesystem.document.HelloWorldDocument;
+import com.sstory.source.custom.example.document.HelloWorldDocument;
 
 import java.time.Instant;
 import java.util.Iterator;

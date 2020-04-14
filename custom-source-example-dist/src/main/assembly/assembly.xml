@@ -14,7 +14,7 @@
 
             <!-- Now, select which projects to include in this module-set. -->
             <includes>
-                <include>com.sstory.source.custom.example.filesystem:ws-filesystem-core</include>
+                <include>com.sstory.source.custom.example:example-custom-source-core</include>
             </includes>
             <binaries>
                 <outputDirectory>${parent.build.finalName}/lib</outputDirectory>
