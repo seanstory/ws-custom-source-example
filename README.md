@@ -2,6 +2,7 @@
 
 # Workplace Search - Custom API Source Example
 A Custom API Source implementation for Elastic Workplace Search that crawls a filesystem for content.
+It was generated from the [Custom API Source Archetype](https://github.com/seanstory/custom-source-archetype)
 
 ### Building
 To build the project, run a simple
