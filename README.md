@@ -1,3 +1,5 @@
+![](https://travis-ci.org/seanstory/ws-custom-source-example.svg?branch=master&status=passed)
+
 # Workplace Search - Custom API Source Example
 A Custom API Source implementation for Elastic Workplace Search that crawls a filesystem for content.
 
