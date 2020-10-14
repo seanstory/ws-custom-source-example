@@ -8,7 +8,7 @@ appender("console", ConsoleAppender) {
     encoder(PatternLayoutEncoder) { pattern = PATTERN }
 }
 
-logger("com.sstory", DEBUG)
-logger("com.sstory.workplace.search.client", TRACE)
+logger("com.seanjstory", DEBUG)
+logger("com.seanjstory.workplace.search.client", TRACE)
 logger("org.mockserver", WARN)
 root(INFO, ["console"])

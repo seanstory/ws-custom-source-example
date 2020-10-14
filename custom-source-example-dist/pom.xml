@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>custom-source-example</artifactId>
-        <groupId>com.sstory.source.custom.example</groupId>
+        <groupId>com.seanjstory.source.custom.example</groupId>
         <version>0.1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -15,7 +15,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.sstory.source.custom.example</groupId>
+            <groupId>com.seanjstory.source.custom.example</groupId>
             <artifactId>example-custom-source-core</artifactId>
             <version>${project.version}</version>
         </dependency>

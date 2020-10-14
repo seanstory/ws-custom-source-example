@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.sstory.source.custom.example</groupId>
+    <groupId>com.seanjstory.source.custom.example</groupId>
     <artifactId>custom-source-example</artifactId>
     <name>Workplace Search Example Custom Source :: Parent</name>
     <packaging>pom</packaging>
@@ -17,7 +17,7 @@
         <kotlin.version>1.2.71</kotlin.version>
         <slf4j.version>1.7.25</slf4j.version>
         <logback.version>1.2.3</logback.version>
-        <workplace.java.api.version>7.8.0-SNAPSHOT</workplace.java.api.version>
+        <workplace.java.api.version>7.8.0</workplace.java.api.version>
 
         <!-- Testing -->
         <spock.version>1.0-groovy-2.4</spock.version>
@@ -59,12 +59,12 @@
                 <version>${kotlin.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.sstory.workplace.search</groupId>
+                <groupId>com.seanjstory.workplace.search</groupId>
                 <artifactId>workplace-search-client</artifactId>
                 <version>${workplace.java.api.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.sstory.workplace.search</groupId>
+                <groupId>com.seanjstory.workplace.search</groupId>
                 <artifactId>workplace-search-sdk</artifactId>
                 <version>${workplace.java.api.version}</version>
             </dependency>

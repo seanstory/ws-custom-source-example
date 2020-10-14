@@ -1,6 +1,6 @@
-package com.sstory.source.custom.example.document;
+package com.seanjstory.source.custom.example.document;
 
-import com.sstory.workplace.search.sdk.api.DocumentBase;
+import com.seanjstory.workplace.search.sdk.api.DocumentBase;
 
 import java.util.Collections;
 import java.util.Map;
